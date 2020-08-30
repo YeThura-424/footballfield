@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusel</title>
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="icon/icofont/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="css/flickity.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/gijgo.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Nav Bar Start -->
+    <div id="navbar">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <!-- logo area -->
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <a class="navbar-brand" href="#"><span> FOOTBALL<br>
+                                -WORLD-</span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse pl-4" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">AVALIABLE PITCH</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        STADIUMS <i class="icofont-circled-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item text-white" href="#">Stadium 1</a>
+                                        <hr>
+                                        <a class="dropdown-item text-white" href="#">Stadium 2</a>
+                                        <hr>
+                                        <a class="dropdown-item text-white" href="#">Stadium 3</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#" aria-disabled="true">ABOUT</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#" aria-disabled="true">CONTACT</a>
+                                </li>
+                            </ul>
+                            <div id="loginarea" class="navbar-nav mr-auto">
+                                <div class="navbar-nav">
+                                    <a href="" class="nav-link active"> <i class="icofont-login"></i>Login </a>
+                                </div>
+                                <div class="navbar-nav">
+                                    <span class="d-xl-block d-lg-block d-none nav-link">|</span>
+                                </div>
+                                <div class="navbar-nav">
+                                    <a href="" class="nav-link active"> <i class="icofont-login"></i>Register</a>
+                                </div>
+                            </div>
+                            <div id="userarea" class="navbar-nav mr-auto d-none">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="image/logo.jpg" class="userprofile rounded-circle">
+                                        User1<i class="icofont-circled-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item text-white" href="#"><i class="icofont-waiter-alt"></i>Profile</a>
+                                        <hr>
+                                        <a class="dropdown-item text-white" href="#"><i class="icofont-listine-dots"></i>Booking List</a>
+                                        <hr>
+                                        <a class="dropdown-item text-white" href="#"><i class="icofont-logout"></i>Logout</a>
+                                    </div>
+                                </li>
+                            </div>
+                            <form class="form-inline my-2 d-lg-block d-none">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <!-- <button class="btn my-2 searchBtn rounded" type="submit">Search</button> -->
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    <!-- header section start -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="main-carousel" data-flickity='{"autoPlay": true , "wrapAround":true}'>
+                    <div class="carousel-cell">
+                        <img src="image/homecarousel.jpg">
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="image/homecarousel.jpg">
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="image/homecarousel.jpg">
+                    </div>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header section end -->
+    <!-- main content Start -->
+    <div id="main">
+        <div id="avaliable-pitch">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-white  pt-5">
+                        <h2 class="text-uppercase text-center">avaliable pitch</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="owl-carousel owl-theme">
+                            <div class="card cardfield">
+                                <img src="image/field1.jpg" class="card-img-top" style="max-width: auto !important; object-fit: cover; height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="booking.html" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card cardfield">
+                                <img src="image/field2.jpg" class="card-img-top" style="max-width: auto !important; object-fit: cover; height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="booking.html" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card cardfield">
+                                <img src="image/field3.jpg" class="card-img-top" style="max-width: auto !important; object-fit: cover; height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="booking.html" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card cardfield">
+                                <img src="image/field4.jpg" class="card-img-top" style="max-width: auto !important; object-fit: cover; height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="booking.html" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                            <div class="card cardfield">
+                                <img src="image/field1.jpg" class="card-img-top" style="max-width: auto !important; object-fit: cover; height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="booking.html" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="upcomingevent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-white  pt-5 pb-3">
+                        <h2 class="text-uppercase text-center">upcoming event</h2>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="image/field1.jpg" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <a href="event.html" class="btn btn-primary">Join Event</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                        <div class="card mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="image/field2.jpg" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                        <a href="event.html" class="btn btn-primary">Join Event</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="offer">
+            <div class="container">
+                <div class="row justify-content-center text-white">
+                    <div class="col-12 pt-5 pb-3">
+                        <h2 class="text-uppercase text-center">what we offer</h2>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-12 text-center">
+                        <i class="icofont-jersey offericon"></i>
+                        <h5 class="py-3">Free Jersey</h5>
+                        <p>During the promotio, we provide free jersey for customers with play hours.</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-12 text-center">
+                        <i class="icofont-water-bottle offericon"></i>
+                        <h5 class="py-3">Free Water</h5>
+                        <p>We provide free water for every customer during play time.</p>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-12 text-center">
+                        <i class="icofont-stopwatch offericon"></i>
+                        <h5 class="py-3">Free Hour</h5>
+                        <p>Customers have chance to get free one hour for three hours of paid play</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main content end -->
+    <footer id="footer" class="bg-dark">
+        <div class="container pt-3">
+            <div class="row justify-content-center text-white">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                    <h5 class="py-3">Useful Link</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="" class="usefullink text-white"><i class="icofont-rounded-right"></i>Home</a></li>
+                        <li><a href="" class="usefullink text-white"><i class="icofont-rounded-right"></i>Avaliabel Pitch</a></li>
+                        <li><a href="" class="usefullink text-white"><i class="icofont-rounded-right"></i>About</a></li>
+                        <li><a href="" class="usefullink text-white"><i class="icofont-rounded-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                    <h5 class="py-3">Contact Info</h5>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-12">
+                    <h5 class="py-3">Media Links</h5>
+                    <i class="icofont-twitter icon"></i>
+                    <i class="icofont-facebook icon"></i>
+                    <i class="icofont-instagram icon"></i>
+                    <i class="icofont-google-plus icon"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/custom.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+</body>
+
+</html>
