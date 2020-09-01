@@ -2,7 +2,7 @@
     <div id="register">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center my-3 mt-5" >
+                <div class="col-lg-12 text-center my-3 mt-5">
                     <div class="alert alert-primary m-auto" role="alert" style="width: 65% !important">
                         <h2> Register </h2>
                     </div>
@@ -10,8 +10,8 @@
             </div>
         </div>
         <div class="container">
-           <div class="row justify-content-center">
-               <div class="col-8">
+            <div class="row justify-content-center">
+                <div class="col-8">
                     <form action=" {{route('register')}} " method="POST">
                         @csrf
                         <div class="form-row my-4">
@@ -53,8 +53,8 @@
                             <a href=" {{route('login')}} " class="text-white text-decoration-none">Have an account? Go to login</a>
                         </div>
                     </form>
-               </div>
-           </div>
+                </div>
+            </div>
         </div>
     </div>
 </x-frontend>
