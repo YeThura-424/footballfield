@@ -15,7 +15,7 @@ class StadiumController extends Controller
     public function index()
     {
         $stadiums = Stadium::all();
-        return view('backend.stadium.list',compact('stadiums'));
+        return view('backend.stadium.list', compact('stadiums'));
     }
 
     /**
@@ -37,30 +37,29 @@ class StadiumController extends Controller
     public function store(Request $request)
     {
 
-         $validator = $request->validate([
-            'name' => ['required','string','max:255','unique:stadia'],
+        $validator = $request->validate([
+            'name' => ['required', 'string', 'max:255', 'unique:stadia'],
             'photo' => 'required|mimes:jpeg,bmp,png,jpg'
         ]);
 
         if ($validator) {
-        $name = $request->name;
-               $photo = $request->photo;
-       
-       
-               $imageName = time().'.'.$photo->extension();
-               $photo->move(public_path('image/stadium'),$imageName);
-               $filepath = 'image/stadium/'.$imageName;
-       
-               $stadium = new Stadium;
-               $stadium->name = $name;
-               $stadium->photo = $filepath;
-               $stadium->save();
-       
-               return redirect()->route('backside.stadium.index')->with("successMsg",'New Stadium is ADDED in your data');
-           } else {
+            $name = $request->name;
+            $photo = $request->photo;
+
+
+            $imageName = time() . '.' . $photo->extension();
+            $photo->move(public_path('image/stadium'), $imageName);
+            $filepath = 'image/stadium/' . $imageName;
+
+            $stadium = new Stadium;
+            $stadium->name = $name;
+            $stadium->photo = $filepath;
+            $stadium->save();
+
+            return redirect()->route('backside.stadium.index')->with("successMsg", 'New Stadium is ADDED in your data');
+        } else {
             return redirect::back()->withErrors($validator);
         }
-
     }
 
     /**
@@ -84,7 +83,7 @@ class StadiumController extends Controller
     {
         // dd($id);
         $stadium = Stadium::find($id);
-        return view('backend.stadium.edit',compact('stadium'));
+        return view('backend.stadium.edit', compact('stadium'));
     }
 
     /**
@@ -97,34 +96,34 @@ class StadiumController extends Controller
     public function update(Request $request, $id)
     {
 
-         $validator = $request->validate([
-            'name' => ['required','string','max:255'],
-            
+        $validator = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+
         ]);
 
         if ($validator) {
             $name = $request->name;
-                $newphoto = $request->photo;
-                $oldPhoto = $request->oldPhoto;
-        
-                if ($request->hasFile('photo')) {
-                   $imageName = time().'.'.$newphoto->extension();
-                   $newphoto->move(public_path('image/stadium'),$imageName);
-                   $filepath = 'image/stadium/'.$imageName;
-                   if (\File::exists(public_path($oldPhoto))) {
-                       \File::delete(public_path($oldPhoto));
-                   }
-               } else {
-                   $filepath = $oldPhoto;
-               }
-        
-               $stadium = Stadium::find($id);
-               $stadium->name = $name;
-               $stadium->photo = $filepath;
-               $stadium->save();
-        
-               return redirect()->route('backside.stadium.index')->with('successMsg','Existing Stadium is UPDATED in your data');
-           } else {
+            $newphoto = $request->photo;
+            $oldPhoto = $request->oldPhoto;
+
+            if ($request->hasFile('photo')) {
+                $imageName = time() . '.' . $newphoto->extension();
+                $newphoto->move(public_path('image/stadium'), $imageName);
+                $filepath = 'image/stadium/' . $imageName;
+                if (\File::exists(public_path($oldPhoto))) {
+                    \File::delete(public_path($oldPhoto));
+                }
+            } else {
+                $filepath = $oldPhoto;
+            }
+
+            $stadium = Stadium::find($id);
+            $stadium->name = $name;
+            $stadium->photo = $filepath;
+            $stadium->save();
+
+            return redirect()->route('backside.stadium.index')->with('successMsg', 'Existing Stadium is UPDATED in your data');
+        } else {
             return redirect::back()->withErrors($validator);
         }
     }
@@ -141,6 +140,6 @@ class StadiumController extends Controller
         $stadium = Stadium::find($id);
         $stadium->delete();
 
-        return redirect()->route('backside.stadium.index')->with('successMsg','Existing Stadium is DELETED in your data');
+        return redirect()->route('backside.stadium.index')->with('successMsg', 'Existing Stadium is DELETED in your data');
     }
 }

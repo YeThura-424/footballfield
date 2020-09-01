@@ -16,7 +16,7 @@ class PriceController extends Controller
     public function index()
     {
         $prices = Price::all();
-        return view('backend.price.list',compact('prices'));
+        return view('backend.price.list', compact('prices'));
     }
 
     /**
@@ -47,7 +47,7 @@ class PriceController extends Controller
         $Price->price = $price;
         $Price->save();
 
-        return redirect()->route('backside.price.index')->with("successMsg",'New Price is ADDED in your data');
+        return redirect()->route('backside.price.index')->with("successMsg", 'New Price is ADDED in your data');
     }
 
     /**
@@ -70,7 +70,7 @@ class PriceController extends Controller
     public function edit($id)
     {
         $price = Price::find($id);
-        return view('backend.price.edit',compact('price'));
+        return view('backend.price.edit', compact('price'));
     }
 
     /**
@@ -92,7 +92,7 @@ class PriceController extends Controller
         $Price->price = $price;
         $Price->save();
 
-         return redirect()->route('backside.price.index')->with("successMsg",'New Price is UPDATE in your data');
+        return redirect()->route('backside.price.index')->with("successMsg", 'New Price is UPDATE in your data');
     }
 
     /**
@@ -106,6 +106,6 @@ class PriceController extends Controller
         $price = Price::find($id);
         $price->delete();
 
-        return redirect()->route('backside.price.index')->with("successMsg",'New Price is DELETE in your data');
+        return redirect()->route('backside.price.index')->with("successMsg", 'New Price is DELETE in your data');
     }
 }
