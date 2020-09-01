@@ -75,24 +75,24 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
-     $name = $request->name;
-     $phone = $request->phone;
-     $email = $request->email;
-     $password = $request->password;
-     $address = $request->address;
-     $profile = 'image/user/newuser.png';
+        $name = $request->name;
+        $phone = $request->phone;
+        $email = $request->email;
+        $password = $request->password;
+        $address = $request->address;
+        $profile = 'image/user/newuser.png';
 
-     $user = User::create([
-        'name' => $name,
-        'profile' => $profile,
-        'email' => $email,
-        'password' => Hash::make($password),
-        'phone' => $phone,
-        'address' => $address,
-        
-    ]);
-     $user->assignRole('customer');
-     Auth::login($user);
-     return redirect('/');
- }
+        $user = User::create([
+            'name' => $name,
+            'profile' => $profile,
+            'email' => $email,
+            'password' => Hash::make($password),
+            'phone' => $phone,
+            'address' => $address,
+
+        ]);
+        $user->assignRole('customer');
+        Auth::login($user);
+        return redirect('/');
+    }
 }

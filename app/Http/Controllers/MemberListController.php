@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+
 class MemberListController extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class MemberListController extends Controller
     public function index()
     {
         $users = User::role('customer')->get();
-        return view('backend.memberlist.memberlist',compact('users'));
+        return view('backend.memberlist.memberlist', compact('users'));
     }
 
     /**
@@ -76,7 +77,7 @@ class MemberListController extends Controller
         $user->status = $status;
         $user->save();
 
-        return redirect()->route('backside.memberlist.index')->with('successMsg','Member Status is CHANGE in your data');
+        return redirect()->route('backside.memberlist.index')->with('successMsg', 'Member Status is CHANGE in your data');
     }
 
     /**
