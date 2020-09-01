@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Stadium extends Model
 {
-    use SoftDeletes;
+	use SoftDeletes;
 	protected $fillable = [
-		'name','photo'
+		'name',
+		'photo'
 	];
 
 	public function pitches()

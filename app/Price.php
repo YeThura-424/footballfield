@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Price extends Model
 {
-    use SoftDeletes;
+	use SoftDeletes;
 	protected $fillable = [
-		'starttime','endtime','price'
+		'starttime',
+		'endtime',
+		'price'
 	];
 }
