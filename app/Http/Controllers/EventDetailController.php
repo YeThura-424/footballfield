@@ -16,7 +16,7 @@ class EventDetailController extends Controller
     {
 
         $eventdetails = Eventdetail::all();
-        return view('backend.eventdetail.eventdetail',compact('eventdetails'));
+        return view('backend.eventdetail.eventdetail', compact('eventdetails'));
     }
 
     /**

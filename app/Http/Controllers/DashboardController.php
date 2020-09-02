@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Rentdetail;
+
 class DashboardController extends Controller
 {
     /**
@@ -16,8 +17,8 @@ class DashboardController extends Controller
     {
         $today = date('Y-m-d');
         //dd($today);
-        $rentdetails = Rentdetail::where('rentdate',$today)->where('status','0')->get();
-        return view('backend.dashboard.dashboard',compact('rentdetails'));
+        $rentdetails = Rentdetail::where('rentdate', $today)->where('status', '0')->get();
+        return view('backend.dashboard.dashboard', compact('rentdetails'));
     }
 
     /**
