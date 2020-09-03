@@ -7,9 +7,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Eventdetail extends Model
 {
-    use SoftDeletes;
+	use SoftDeletes;
 	protected $fillable = [
-		'startdate','enddate','teamname','teamno','event_id','pitch_id','user_id'
+		'startdate',
+		'enddate',
+		'teamname',
+		'teamno',
+		'event_id',
+		'pitch_id',
+		'user_id'
 	];
 
 	public function user()

@@ -15,7 +15,7 @@ class RentDetailController extends Controller
     public function index()
     {
         $rentdetails = Rentdetail::all();
-        return view('backend.rentdetail.rentdetail',compact('rentdetails'));
+        return view('backend.rentdetail.rentdetail', compact('rentdetails'));
     }
 
     /**
@@ -23,10 +23,7 @@ class RentDetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        
-    }
+    public function create() {}
 
     /**
      * Store a newly created resource in storage.
@@ -68,11 +65,7 @@ class RentDetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-       
-     
-    }
+    public function update(Request $request, $id) {}
 
     /**
      * Remove the specified resource from storage.
@@ -80,10 +73,5 @@ class RentDetailController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        
-        
-      
-    }
+    public function destroy($id) {}
 }

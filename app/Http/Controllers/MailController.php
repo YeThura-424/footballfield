@@ -10,9 +10,9 @@ class MailController extends Controller
 {
     public function basic_email(Request $request)
     {
-    	$status=1;
-        $rentdetail=Rentdetail::where('id', request('id'))->first();
-        $rentdetail->status=$status;
+        $status = 1;
+        $rentdetail = Rentdetail::where('id', request('id'))->first();
+        $rentdetail->status = $status;
         $rentdetail->save();
         $data = array('name' => request('name'));
 
@@ -20,13 +20,13 @@ class MailController extends Controller
             $message->to(request('email'), 'Sending Access Account')->subject('Confirm Your Booking');
             $message->from('fuselworld@yethura.me', 'Fusel World');
         });
-        return redirect()->route('backside.rentdetail.index')->with('successMsg','Booking STATUS is CHANGED in your data');
+        return redirect()->route('backside.rentdetail.index')->with('successMsg', 'Booking STATUS is CHANGED in your data');
         // return response()->json(['success'=>'Please Check your Email and Access the Account!']);
     }
     public function html_email(Request $request)
     {
-        $rentdetail=Rentdetail::where('id', request('id'))->first();
-       
+        $rentdetail = Rentdetail::where('id', request('id'))->first();
+
         $rentdetail->delete();
         $data = array('name' => request('name'));
 
@@ -34,7 +34,7 @@ class MailController extends Controller
             $message->to(request('email'), 'Sending Access Account')->subject('Cancelling Your Booking');
             $message->from('fuselworld@yethura.me', 'Fusel World');
         });
-        return redirect()->route('backside.rentdetail.index')->with('successMsg','Booking is DELETED in your data');
+        return redirect()->route('backside.rentdetail.index')->with('successMsg', 'Booking is DELETED in your data');
         // return response()->json(['success'=>'Please Check your Email and Access the Account!']);
     }
 }

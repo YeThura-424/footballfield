@@ -8,9 +8,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Event extends Model
 {
-     use SoftDeletes;
+	use SoftDeletes;
 	protected $fillable = [
-		'name','photo','startdate','enddate','teamno','pitch_id','description','rule'
+		'name',
+		'photo',
+		'startdate',
+		'enddate',
+		'teamno',
+		'pitch_id',
+		'description',
+		'rule'
 	];
 
 	public function pitch()
