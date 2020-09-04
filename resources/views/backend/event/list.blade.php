@@ -1,5 +1,5 @@
 <x-backend>
-	<main class="app-content">
+    <main class="app-content">
         <div class="app-title">
             <div>
                 <h1> <i class="icofont-list"></i>Event List </h1>
@@ -14,14 +14,14 @@
             <div class="col-md-12">
                 <div class="tile">
                     <div class="tile-body">
-                         @if(session('successMsg') != NULL)
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <strong> ✅ SUCCESS!</strong>
-                                {{ session('successMsg') }}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
+                        @if(session('successMsg') != NULL)
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong> ✅ SUCCESS!</strong>
+                            {{ session('successMsg') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
                         @endif
                         <div class="table-responsive">
                             <table class="table table-hover table-bordered" id="sampleTable">
@@ -51,9 +51,10 @@
                                     $id = $event->id;
                                     @endphp
                                     <tr>
-                                        <td>  {{$i++}} </td>
+                                        <td> {{$i++}} </td>
                                         <td> <img src=" {{asset($photo)}} " class="img-fluid" style="width: 140px; object-fit: cover;">
-                                            {{$name}} </td>
+                                            {{$name}}
+                                        </td>
                                         <td> {{$pitch}} </td>
                                         <td>{{$startdate}}</td>
                                         <td>{{$enddate}}</td>
@@ -66,10 +67,10 @@
                                                 <i class="icofont-ui-settings icofont-1x"></i>
                                             </a>
                                             <form action=" {{route('backside.event.destroy',$id)}} " method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure to delete the item?')">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-outline-danger" type="submit"><i class="icofont-close icofont-1x"></i></button>
-                                        </form>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-outline-danger" type="submit"><i class="icofont-close icofont-1x"></i></button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach
