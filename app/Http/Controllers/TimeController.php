@@ -15,7 +15,7 @@ class TimeController extends Controller
     public function index()
     {
         $times = Time::all();
-        return view('backend.time.list',compact('times'));
+        return view('backend.time.list', compact('times'));
     }
 
     /**
@@ -25,7 +25,7 @@ class TimeController extends Controller
      */
     public function create()
     {
-        return view('backend.time.new'); 
+        return view('backend.time.new');
     }
 
     /**
@@ -46,7 +46,7 @@ class TimeController extends Controller
         $time->endtime = $endtime;
         $time->save();
 
-        return redirect()->route('backside.time.index')->with('successMsg','New Time is ADDED in your data');
+        return redirect()->route('backside.time.index')->with('successMsg', 'New Time is ADDED in your data');
     }
 
     /**
@@ -69,7 +69,7 @@ class TimeController extends Controller
     public function edit($id)
     {
         $time = Time::find($id);
-        return view('backend.time.edit',compact('time'));
+        return view('backend.time.edit', compact('time'));
     }
 
     /**
@@ -89,7 +89,7 @@ class TimeController extends Controller
         $time->endtime = $endtime;
         $time->save();
 
-        return redirect()->route('backside.time.index')->with('successMsg','Existing Time is UPDATED in your data');
+        return redirect()->route('backside.time.index')->with('successMsg', 'Existing Time is UPDATED in your data');
     }
 
     /**
@@ -103,6 +103,6 @@ class TimeController extends Controller
         $time = Time::find($id);
         $time->delete();
 
-        return redirect()->route('backside.time.index')->with('successMsg','Existing Time is DELETED in your data');
+        return redirect()->route('backside.time.index')->with('successMsg', 'Existing Time is DELETED in your data');
     }
 }

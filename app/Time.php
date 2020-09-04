@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Time extends Model
 {
-    use SoftDeletes;
+	use SoftDeletes;
 	protected $fillable = [
-		'starttime','endtime'
+		'starttime',
+		'endtime'
 	];
-
 }
