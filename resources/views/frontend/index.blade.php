@@ -4,15 +4,15 @@
         <ol class="carousel-indicators">
             @foreach($stadia as $stadium)
             <li data-target="#carouselExampleCaptions" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
-             @endforeach
-            
+            @endforeach
+
         </ol>
         <div class="carousel-inner">
             @foreach($stadia as $stadium)
-                    @php
-                    $name = $stadium->name;
-                    $photo = $stadium->photo;
-                    @endphp
+            @php
+            $name = $stadium->name;
+            $photo = $stadium->photo;
+            @endphp
             <div class="carousel-item {{ $loop->first ? 'active' : '' }}" data-interval="3000">
                 <img src=" {{asset($photo)}} " class="d-block w-100" style="height: 90vh;">
                 <div class="carousel-caption d-none d-md-block">
@@ -97,7 +97,7 @@
                                             Start At: {{$startdate}}
                                         </div>
                                         @if(Auth::check())
-                                        <a href=" {{route('event',$id)}} " class="btn btn-primary float-right" disabled >Join Event</a>
+                                        <a href=" {{route('event',$id)}} " class="btn btn-primary float-right" disabled>Join Event</a>
                                         @else
                                         <a href=" {{route('login')}} " class="btn btn-primary"> Join Event </a>
                                         @endif
