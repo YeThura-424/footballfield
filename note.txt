@@ -1,0 +1,17 @@
+Route::post('sendmail', 'MailController@basic_email')->name('confirm');
+Route::post('sendhtmlemail', 'MailController@html_email')->name('cancel');
+
+
+
+
+MAIL_DRIVER =smtp
+MAIL_HOST =mail.minkhantthumm.me
+MAIL_PORT =465
+MAIL_USERNAME =_mainaccount@minkhantthumm.me
+MAIL_PASSWORD =minkhantthu 
+MAIL_ENCRYPTION = ssl
+
+
+
+ @if($timestart == $time->starttime) {{'disabled'}} @endif
+  @if($timeend == $time->endtime) {{'disabled'}} @endif

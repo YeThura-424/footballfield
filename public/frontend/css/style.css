@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/*.carousel-cell {
+    height: 90vh;
+}*/
+
+/*.carousel-caption.d-none.d-md-block {
+    background-color: rgba(2, 2, 54, 0.9);
+    width: 40%;
+    border-radius: 30px;
+    margin: auto;
+}*/
+
+/*.flickity-button.flickity-prev-next-button.previous,
+.flickity-button.flickity-prev-next-button.next {
+    padding: 0px;
+    color: #fff;
+    background: #151846;
+}*/
+
+/*.flickity-button.flickity-prev-next-button.previous:hover,
+.flickity-button.flickity-prev-next-button.next:hover {
+    background: white;
+    color: #0e0f3e;
+}
+*/
+
+#navbar {
+    background-color: #343A40;
+}
+
+.navbar-toggler.navbar-toggler {
+    border-color: rgb(255, 102, 203);
+}
+
+
+div.collapse .navbar-nav .nav-link {
+    padding-right: 30px;
+}
+
+@media(min-width:768px) {
+    .dropdown-menu {
+        border: none;
+        transition: 0.1s;
+    }
+}
+
+
+.dropdown-item:hover {
+    color: black !important;
+}
+
+.userprofile {
+    width: 30px;
+    height: 30px;
+}
+
+.usefullink {
+    text-decoration: none;
+    color: black;
+}
+
+.usefullink:hover {
+    text-decoration: none;
+    color: blue !important;
+}
+
+.icon {
+    font-size: 30px;
+    color: white;
+    background-color: #3e3e42;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.icon:hover {
+    color: black;
+    font-size: 30px;
+    background-color: white;
+}
+
+#main {
+    background: linear-gradient(to bottom, rgba(6, 12, 34, 0.8)0, rgba(6, 12, 34, 0.8)100%),
+        url("../image/15990185852.jpeg");
+    background-attachment: fixed;
+    /*background-size: cover;*/
+    background-position: center;
+}
+
+.cardfield {
+    margin: 15px;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-prev {
+    left: -2rem;
+}
+
+.owl-next {
+    right: -2rem;
+}
+
+.offericon {
+    font-size: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+    padding: 5px;
+
+}
+
+
+h1,
+h2 {
+    font-family: Oswald;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px;
+}
+
+.formbook {
+    background-color: #024F4B;
+    color: white;
+    margin-bottom: 30px;
+
+}
+
+/*.owl-stage-outer {
+    margin-top: 115px;
+}
+*/
+
+.btn.btn-primary.ml-auto {
+    float: right;
+}
+
+.alert.alert-primary.m-auto {
+    width: 40%;
+}
+
+#login,
+#register {
+    background: linear-gradient(to bottom, rgba(6, 12, 34, 0.5)0, rgba(6, 12, 34, 0.5)100%),
+        url(../image/13.jpg);
+    background-position: center;
+}
+
+dl,
+ol,
+ul {
+
+    margin-left: 20px;
+}
+
+
+#image-preview {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #ecf0f1;
+    border-radius: 100%;
+    margin: 10px;
+    border: 1px solid gray;
+}
+
+#image-preview input {
+    line-height: 200px;
+    font-size: 200px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+}
+
+#image-preview label {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: #bdc3c7;
+    border-radius: 50px;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-transform: uppercase;
+    top: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    /*display: none;*/
+}
