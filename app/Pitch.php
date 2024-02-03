@@ -10,7 +10,7 @@ class Pitch extends Model
 {
     use SoftDeletes;
 	protected $fillable = [
-		'name','photo','description','stadia_id'
+		'name','photo','description','field_size','stadia_id'
 	];
 
 	public function stadia()

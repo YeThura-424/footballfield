@@ -46,6 +46,7 @@ class PitchController extends Controller
         $name = $request->name;
         $stadiumid = $request->stadiumid;
         $description = $request->description;
+        $field_size = $request->pitch_size;
 
         //file upload
         if ($request->hasfile('images')) 
@@ -64,6 +65,7 @@ class PitchController extends Controller
         $pitch->name = $name;
         $pitch->photo = json_encode($data);
         $pitch->description = $description;
+        $pitch->field_size = $field_size;
         $pitch->stadia_id = $stadiumid;
         $pitch->save();
 

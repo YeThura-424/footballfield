@@ -65,7 +65,7 @@
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
-        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="{{asset(Auth::user()->profile)}}" alt="User Image" style="width: 50px; height: 50px;">
+        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="{{asset(Auth::user()->profile)}}" alt="User Image" style="width: 40px; height: 40px;">
             <div>
                 <p class="app-sidebar__user-name">{{Auth::user()->name}}</p>
                 <p class="app-sidebar__user-designation">{{Auth::user()->roles()->pluck('name')[0]}}</p>
@@ -129,7 +129,7 @@
                 </a>
             </li>
             <li>
-                <a class="app-menu__item {{Request::segment(2) === 'ptich' ? 'active':''}}" href=" {{route('backside.pitch.index')}} ">
+                <a class="app-menu__item {{Request::segment(2) === 'pitch' ? 'active':''}}" href=" {{route('backside.pitch.index')}} ">
                     <i class="app-menu__icon icofont-field"></i>
                     <span class="app-menu__label">
                         Field List

@@ -18,6 +18,7 @@ class CreatePitchesTable extends Migration
             $table->string('name');
             $table->longText('photo');
             $table->longText('description');
+            $table->text('field_size');
             $table->foreignId('stadia_id')->references('id')->on('stadia')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
