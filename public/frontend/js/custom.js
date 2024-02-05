@@ -43,10 +43,10 @@ $(document).ready(function() {
         ]
     });
 
-    $(window).scroll(function() {
-        $("nav").toggleClass("fixed-top", $(this).scrollTop() > 100);
-    });
-
+    // $(window).scroll(function() {
+    //     $("nav").toggleClass("fixed-top", $(this).scrollTop() > 100);
+    // });
+    $("nav").toggleClass("fixed-top");
     $("#pickdate").dateDropper({
         theme: "leaf",
         largeOnly: true,

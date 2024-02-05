@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 /*.carousel-cell {
@@ -30,25 +29,23 @@
 */
 
 #navbar {
-    background-color: #343A40;
+    background-color: #343a40;
 }
 
 .navbar-toggler.navbar-toggler {
     border-color: rgb(255, 102, 203);
 }
 
-
 div.collapse .navbar-nav .nav-link {
     padding-right: 30px;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .dropdown-menu {
         border: none;
         transition: 0.1s;
     }
 }
-
 
 .dropdown-item:hover {
     color: black !important;
@@ -85,7 +82,11 @@ div.collapse .navbar-nav .nav-link {
 }
 
 #main {
-    background: linear-gradient(to bottom, rgba(6, 12, 34, 0.8)0, rgba(6, 12, 34, 0.8)100%),
+    background: linear-gradient(
+            to bottom,
+            rgba(6, 12, 34, 0.8) 0,
+            rgba(6, 12, 34, 0.8) 100%
+        ),
         url("../image/15990185852.jpeg");
     background-attachment: fixed;
     /*background-size: cover;*/
@@ -117,9 +118,7 @@ div.collapse .navbar-nav .nav-link {
     color: white;
     border-radius: 10%;
     padding: 5px;
-
 }
-
 
 h1,
 h2 {
@@ -132,10 +131,9 @@ h2 {
 }
 
 .formbook {
-    background-color: #024F4B;
+    background-color: #024f4b;
     color: white;
     margin-bottom: 30px;
-
 }
 
 /*.owl-stage-outer {
@@ -153,7 +151,11 @@ h2 {
 
 #login,
 #register {
-    background: linear-gradient(to bottom, rgba(6, 12, 34, 0.5)0, rgba(6, 12, 34, 0.5)100%),
+    background: linear-gradient(
+            to bottom,
+            rgba(6, 12, 34, 0.5) 0,
+            rgba(6, 12, 34, 0.5) 100%
+        ),
         url(../image/13.jpg);
     background-position: center;
 }
@@ -161,10 +163,8 @@ h2 {
 dl,
 ol,
 ul {
-
     margin-left: 20px;
 }
-
 
 #image-preview {
     width: 400px;
@@ -205,4 +205,7 @@ ul {
     margin: auto;
     text-align: center;
     /*display: none;*/
+}
+.row.justify-content-between.text-white.footer_div {
+    margin: 0 !important;
 }
