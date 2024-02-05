@@ -23,8 +23,8 @@
                 <div class="col-12">
                     <!-- logo area -->
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <a class="navbar-brand" href="{{route('index')}}"><span> FOOTBALL<br>
-                                -WORLD-</span>
+                        <a class="navbar-brand" href="{{route('index')}}"><span> FUTSEL
+                                WORLD</span>
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -101,10 +101,12 @@
     </div>
     <!-- Nav Bar End -->
     
-    {{$slot}}
+    <div class="pt-5">
+        {{$slot}}
+    </div>
     <footer id="footer" class="bg-dark">
-        <div class="container pt-3">
-            <div class="row justify-content-center text-white">
+        <div class="pt-3">
+            <div class="row justify-content-between text-white footer_div">
                 <div class="col-xl-3 col-lg-3 col-md-4 col-12">
                     <h5 class="py-3">Useful Link</h5>
                     <ul class="list-unstyled">
