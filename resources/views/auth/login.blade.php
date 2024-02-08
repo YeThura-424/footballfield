@@ -2,7 +2,7 @@
     <div id="login">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center my-3" >
+                <div class="col-lg-12 text-center my-3 mt-5" >
                     <div class="alert alert-primary m-auto" role="alert">
                         <h2> Login </h2>
                     </div>
@@ -13,9 +13,17 @@
             <div class="container">
 
                 <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center my-3" >
+                        <div class="alert alert-primary m-auto" role="alert">
+                            <p> Admin Login info</p>
+                            <hr>
+                            <span>email : admin@gmail.com</span> <br>
+                            <span>password : 123456789</span>
+                        </div>
+                    </div>
                     <div class="col-5">
-
-
+                        
+                    
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group">
