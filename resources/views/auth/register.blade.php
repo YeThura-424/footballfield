@@ -2,7 +2,7 @@
     <div id="register">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center my-3"  >
+                <div class="col-lg-12 text-center my-3 mt-5" >
                     <div class="alert alert-primary m-auto" role="alert" style="width: 65% !important">
                         <h2> Register </h2>
                     </div>
