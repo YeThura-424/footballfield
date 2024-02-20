@@ -50,7 +50,7 @@
                                     <label for="name_id" class="col-sm-2 col-form-label"> Field Size </label>
                                     <div class="col-sm-10">
                                       <input type="text" class="form-control" id="name_id" name="field_size" placeholder="138ft x 68ft">
-                                      {{$errors->first('name') }}
+                                      {{$errors->first('field_size') }}
                                     </div>
                                 </div>
                                 <div class="form-group row">

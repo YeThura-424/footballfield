@@ -40,13 +40,15 @@ class PitchController extends Controller
     {
          $validator = $request->validate([
             'name'  => ['required', 'string', 'max:255', 'unique:pitches'],
+            'field_size' => ['required']
         ]);
 
         if ($validator) {
         $name = $request->name;
         $stadiumid = $request->stadiumid;
         $description = $request->description;
-        $field_size = $request->pitch_size;
+        $field_size = $request->field_size;
+
 
         //file upload
         if ($request->hasfile('images')) 

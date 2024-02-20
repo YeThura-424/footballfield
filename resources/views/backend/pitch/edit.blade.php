@@ -5,6 +5,7 @@
 	$oldphoto = $pitch->photo;
 	$stadiumid = $pitch->stadia_id;
 	$description = $pitch->description;
+    $field_size = $pitch->field_size;
 	@endphp
 	<main class="app-content">
             <div class="app-title">
@@ -55,6 +56,13 @@
                                     <label for="i_description" class="col-sm-2 col-form-label"> Description </label>
                                     <div class="col-sm-10">
                                       <textarea class="form-control" id="i_description" name="description"> {{$description}} </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="name_id" class="col-sm-2 col-form-label"> Field Size </label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control" id="name_id" name="field_size" placeholder="138ft x 68ft" value="{{$field_size}}">
+                                      {{$errors->first('field_size') }}
                                     </div>
                                 </div>
                                 <div class="form-group row">

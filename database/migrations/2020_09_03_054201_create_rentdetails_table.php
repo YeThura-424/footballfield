@@ -22,7 +22,7 @@ class CreateRentdetailsTable extends Migration
             $table->text('totalprice');
             $table->foreignId('pitch_id')->reference('id')->on('pitches')->onDelete('cascade');
             $table->foreignId('user_id')->reference('id')->on('users')->onDelete('cascade');
-            $table->text('status')->default(0);
+            $table->string('status')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });
